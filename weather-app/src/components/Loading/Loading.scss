@@ -1,0 +1,63 @@
+$dotSize: 20px;
+$dotColor: rgba(
+  $color: black,
+  $alpha: 1,
+);
+$speed: 1.8s;
+
+%dot {
+  width: $dotSize;
+  height: $dotSize;
+  background: $dotColor;
+  transform: translateX(0);
+  filter: blur(5px);
+  border-radius: 50%;
+}
+
+.gooey {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  $width: calc(#{$dotSize} * 9);
+  width: $width;
+  $height: calc(#{$dotSize} * 2);
+  height: $height;
+  margin: calc(#{$height} / -2) 0 0 calc(#{$width} / -2);
+  background: rgba($color: white, $alpha: 0.6);
+  filter: contrast(15);
+  border-radius: 99em;
+
+  .dot {
+    @extend %dot;
+    position: absolute;
+    top: calc(#{$dotSize} / 2);
+    left: $dotSize;
+    animation: dot $speed ease-in-out infinite;
+  }
+
+  .dots {
+    margin-top: calc(#{$dotSize} / 2);
+    margin-left: calc(#{$dotSize} * 3);
+    animation: dots $speed ease-in-out infinite;
+
+    display: flex;
+    justify-content: space-between;
+    width: calc(#{$dotSize} * 5);
+
+    span {
+      @extend %dot;
+    }
+  }
+}
+
+@keyframes dot {
+  100% {
+    transform: translateX(calc(#{$dotSize} * 6));
+  }
+}
+
+@keyframes dots {
+  100% {
+    transform: translateX(calc(#{$dotSize} * -2));
+  }
+}

@@ -1,0 +1,85 @@
+
+.input-box {
+  position: relative;
+  // width: 250px;
+  // margin: 10px;
+
+  width: 20em;
+  height: 3em;
+  // line-height: 3;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+#auto-input {
+  height: 100%;
+  width: 100%;
+  outline: 0;
+  border: 0 !important;
+  background: #fff;
+  padding: 0 0.5em;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Montserrat";
+}
+
+#auto-input::placeholder { 
+  color: #000;
+}
+
+.search-icon{
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #000;
+  height: 100%;
+  pointer-events: none;
+}
+
+.autocomplete-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.autocomplete-citi-list {
+  position: absolute;
+  top: 49px;
+  width: 20em;
+  max-height: 35vh;
+  font-size: 1em;
+  font-family: "Montserrat";
+  overflow: auto;
+  border-radius: 5px;
+  z-index: 1000;
+  background: #fff;
+}
+
+.autocomplete-citi-list::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 0 5px 5px 0;
+  background: #fff;
+}
+
+.autocomplete-citi-list::-webkit-scrollbar-thumb {
+  margin: 2px;
+  // background: rgb(182, 0, 0);
+  background: #000;
+  border-radius: 5px;
+}
+
+.autocomplete-citi-list p {
+  padding: 2px 4px;
+  // font-size: 12px;
+  cursor: pointer;
+}
+
+.autocomplete-citi-list p:hover {
+  // background: #1E90FF;
+  // background: rgb(182, 0, 0);
+  background: #000;
+  color: #fff;
+}

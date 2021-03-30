@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 90vh;
+    width: max-content;
+
+    margin: 0 auto;
+    border-radius: 10px;
+
+    .title {
+      margin: 5px auto 5px;
+      padding: 20px;
+      border-radius: 10px;
+      opacity: 0.9;
+
+      h1 {
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-shadow: 1px 1px 5px rgb(83, 83, 83);
+
+        font-size: 5em;
+        font-family: "Montserrat";
+        font-weight: 700;
+      }
+
+      .country {
+        color: white;
+        background-color: rgb(182, 0, 0);
+
+        text-align: center;
+        border-radius: 50%;
+        width: 60px;
+        padding: 10px;
+        margin: 5px auto;
+
+        font-family: "Montserrat";
+        font-weight: 700;
+      }
+    }
+
+    .dash-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+
+      margin: 5px auto;
+      padding: 30px;
+      border-radius: 20px;
+
+      @media (max-width: 600px) {
+        flex-direction: column;
+      }
+
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+
+        .top-flex {
+          display: flex;
+          justify-content: space-evenly;
+
+          .dash-title-value {
+            color: rgba(0, 47, 255, 0.466);
+            font-size: 140px;
+            text-align: center;
+
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+      }
+
+      .min-max-temp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h2 {
+          text-align: center;
+          padding: 2px;
+        }
+
+        .min,
+        .max {
+          font-size: 30px;
+          margin-top: 5px;
+        }
+        .min {
+          color: blue;
+        }
+        .max {
+          color: rgb(182, 0, 0);
+        }
+        .feels-like {
+          text-align: right;
+          opacity: 0.8;
+          font-size: 20px;
+        }
+      }
+
+      .dash-weather {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        color: rgb(0, 0, 0);
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(110, 110, 110, 0.3);
+
+        margin: 10px;
+        padding: 20px;
+
+        @media (max-width: 600px) {
+          margin: 5px auto;
+        }
+
+        .wind {
+          text-align: center;
+          font-size: 40px;
+          margin-top: 50px;
+          color: rgba(0, 47, 255, 0.466);
+        }
+      }
+      .top2 {
+        display: flex;
+        flex-direction: column;
+        margin: 35px auto;
+
+        .weather {
+          font-size: 130px;
+          color: rgba(0, 47, 255, 0.466);
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .bottom2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        p {
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.select-input-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 16px 0 16px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: #fff;
+  background-image: none;
+  flex: 1;
+  padding: 0 0.5em;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: "Montserrat";
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #000;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #fff;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+.select:hover::after {
+  color: lightblue;
+}
+
+.weather-icon {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+// select {
+//   margin: 10px auto;
+
+//   border: 0;
+//   padding: 15px;
+
+//   background-color: rgb(182, 0, 0);
+//   color: white;
+//   border-radius: 50px;
+
+//   border-style: hidden;
+//   outline: none;
+// }
+// ::placeholder {
+//   color: white;
+// }
