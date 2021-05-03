@@ -1,2 +1,3 @@
+# szo.design@tutanota.com
 # Weather App
-##oliverszbo@gmail.com
+
